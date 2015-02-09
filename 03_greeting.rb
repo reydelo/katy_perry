@@ -1,6 +1,5 @@
 require_relative "person"
 
 # Print the string "Hello, nice to meet you Katy Perry."
-person = KATY_PERRY["#{:first_name} #{:last_name}"]
 
-puts person
+puts "Hello, nice to meet you #{KATY_PERRY[:first_name]} #{KATY_PERRY[:last_name]}."
