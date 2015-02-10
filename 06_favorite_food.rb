@@ -2,4 +2,9 @@ require_relative "person"
 
 # Print Katy's favorite foods. It should read "Katy's favorite foods are sushi, hamburgers, and pho."
 
-puts "Katy's favorite foods are #{KATY_PERRY[:favorite_foods(1)]}, #{KATY_PERRY[:address][:city]}, #{KATY_PERRY[:address][:state]}, #{KATY_PERRY[:address][:zip_code]}."
+puts "Katy's favorite foods are #{KATY_PERRY[:favorite_foods][0]}, #{KATY_PERRY[:favorite_foods][1]}, and #{KATY_PERRY[:favorite_foods][2]}."
+
+food_phrase = KATY_PERRY[:favorite_foods][0..-2].join(", ") +
+  ", and " + KATY_PERRY[:favorite_foods][-1]
+
+  puts "#{KATY_PERRY[:first_name]}'s favorite foods are #{food_phrase}."
